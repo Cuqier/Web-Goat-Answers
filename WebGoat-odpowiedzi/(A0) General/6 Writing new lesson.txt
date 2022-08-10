@@ -1,0 +1,1 @@
+6. Wystarczy odczytać podany kod, a parametr 1 to secr37Value.

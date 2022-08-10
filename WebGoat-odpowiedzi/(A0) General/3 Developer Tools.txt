@@ -1,0 +1,6 @@
+4.
+Odpalamy konsole F12 i wywołujemy zadaną funkcję webgoat.customjs.phoneHome(),
+następnie odczytujemy numer
+
+6.
+Odpalamy F12 i sprawdzamy w rekordach networkNum

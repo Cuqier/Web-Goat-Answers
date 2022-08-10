@@ -1,0 +1,35 @@
+2. Kopijemy http strony i sprawdzamy poleceniem w konsoli deweloperskiej, czy cookie są takie same.
+Odpowiedź: yes
+
+7. Sprawdzamy strukturę strony na podatność XSS, polecenie <script>alert("xss")</script>
+
+Well done, but alerts are not very impressive are they? Please continue.
+Thank you for shopping at WebGoat.
+You're support is appreciated
+We have charged credit card:
+-------------------
+$1.2890743356E8
+
+10. Sprawdzamy w jaki sposób reprezentowana jest ścieżka routingu w adresie URL, wpisujemy polecenie: start.mvc#test
+
+11. Odpalamy konsole deweloperską i wklejamy w adresie URL zmodyfikowany adres: localhost:8080/WebGoat/start.mvc#test/<script>webgoat.customjs.phoneHome();<%2Fscript>
+Otrzymujemy odpowiedź:
+test handler
+GoatRouter.js:66 phoneHome invoked
+GoatRouter.js:77 phone home said {"lessonCompleted":true,"feedback":"Congratulations. You have successfully completed the assignment.","output":"phoneHome Response is -1842927206","assignment":"DOMCrossSiteScripting","attemptWasMade":true}
+
+12. 
+A1. Are trusted websites immune to XSS attacks?
+Solution 4: No because the browser trusts the website if it is acknowledged trusted, then the browser does not know that the script is malicious.
+
+A2. When do XSS attacks occur?
+Solution 3: The data is included in dynamic content that is sent to a web user without being validated for malicious content.
+
+A3. What are Stored XSS attacks?
+Solution 1: The script is permanently stored on the server and the victim gets the malicious script when requesting information from the server.
+
+A4. What are Reflected XSS attacks?
+Solution 2: They reflect the injected script off the web server. That occurs when input sent to the web server is part of the request.
+
+A5. Is JavaScript the only way to perform XSS attacks?
+Solution 4: No there are many other ways. Like HTML, Flash or any other type of code that the browser executes.

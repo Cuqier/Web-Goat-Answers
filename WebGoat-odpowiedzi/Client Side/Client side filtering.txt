@@ -1,0 +1,3 @@
+2. Wystarczy otworzyć konsolę deweloperską i wyszukać imię lub nazwisko CEO.
+
+3. Odpalamy Burpa i sprawdzamy odpowiedź dla wysłanego zapytania przy wybraniu kodów promocyjnych, odpowiedź to get_it_for_free.

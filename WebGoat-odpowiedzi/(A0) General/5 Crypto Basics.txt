@@ -1,0 +1,23 @@
+2. Dekodujemy format Base64
+
+3. Dekodujemy xor, https://strelitzia.net/wasXORdecoder/wasXORdecoder.html
+
+4. Dekodujemy MD5 i sha256
+https://md5.gromweb.com/?md5=5ebe2294ecd0e0f08eab7690d2a6ee69
+https://hashtoolkit.com/decrypt-sha256-hash/5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+
+6. Kopiujemy klucz prywatny i tworzymy katalog z kluczem prywatnym np.
+polecenie cat test.key w Kali, następnie używwamy polecenie
+przy użyciu openssl rsa -in test.key -pubout > test.pub i całość realizujemy
+jako klucz publiczny, następnie tworzymy moduł przy pomocy polecenia
+openssl rsa -in test.pub -pubin -modulus -noout, następnie kodujemy w sha256 
+przy pomocy polecenia echo -n "modulus" | opennsl dgst -sign test.key -sha256
+-out sign.sha256, wrzucamy do katalogu np. cat sign.sha256.base64, kopiujemy
+i zrobione
+
+8. Kolejny odpalamy dockera i wpisujemy komendę docker cp shadow ass:/etc/shadow,
+nastepnie logujemy się na root poprzez su-, podajemy hasło. Przechodzimy komendą
+cd /root, następnie sprawdzamy katalogi komendą ls -alF. Łatwo zweryfikować katalog
+default_secret. Polecenie cat default_secret ukazuje ThisIsMySecretPassw0rdF0rY0u.
+Następnie polecenie echo "danykodU2" | openssl enc -aes-256-cbc -d -a -kfile /root/default_secret
+uzyskujemy zaszyfrowaną wiadomość Leaving passwords in docker images is not so secureroot:#
