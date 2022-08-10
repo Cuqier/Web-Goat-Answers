@@ -1,7 +1,0 @@
-2. Logujemy się, login:tom, hasło:yes
-
-3. Wystarczy sprawdzić sieci w konsoli deweloperskiej, znaleźć zapytanie dla View Profile, brakuje role i userId (nie mam pojęcia dlaczego Burp tego nie łapie).
-
-4. Sprawdzamy dla znalezionego userId w poleceniu 3. WebGoat/IDOR/profile/2342384
-
-5. Wystarczy sprawdzić zapytanie dla innego numeru userId

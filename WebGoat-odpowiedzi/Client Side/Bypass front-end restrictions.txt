@@ -1,7 +1,0 @@
-2. Wystarczy zmienić przechwycone zapytanie w burpie:
-select=optison1&radio=optison1&checkbox=osn&shortInput=123s45
-
-3. Burp Suite pozwala na ominięcie standardowej struktury front endu, możemy zatem zmodyfikować zapytanie:
-field1=abc&field2=123&field3=abc+123+ABC&field4=seven&field5=01101&field6=90210-1111&field7=301-604-4882&error=0
-po przekształceniu:
-field1=ac&field2=1df23&field3=abc+1s,df23+ABC&field4=sesdf56ven&field5=0110sd1&field6=9021sdf0-1111&field7=301-6dfs04-4882&error=0

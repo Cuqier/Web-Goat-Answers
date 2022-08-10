@@ -1,2 +1,0 @@
-2. Przechwytujemy w Burpie, albo sprawdzamy przez konsolę deweloperską. W przechwyconym zapytaniu znajduje się login i hasło.
-{"username":"CaptainJack","password":"BlackPearl"}

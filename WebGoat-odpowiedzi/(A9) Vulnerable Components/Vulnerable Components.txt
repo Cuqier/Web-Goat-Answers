@@ -1,4 +1,0 @@
-12. To pytanie ma na celu wykorzystanie luki, w celu uruchomienia czegoś innego:
-<java.lang.Integer>
-kalkulator
-</java.lang.Integer>

@@ -1,4 +1,0 @@
-6.
-Odpalamy Burp Suite lub Zapa, edytujemy metodę na GET, następnie dodajemy 
-'x-request-intercepted:true' w wywołaniu i edytujemy wartość parametru
-change me na 'Requests+are+tampered+easily

@@ -1,4 +1,0 @@
-Solution 3: By stealing a database where names and emails are stored and uploading it to a website.
-Solution 1: By changing the names and emails of one or more users stored in a database.
-Solution 4: By launching a denial of service attack on the servers.
-Solution 2: The systems security is compromised even if only one goal is harmed.

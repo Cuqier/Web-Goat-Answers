@@ -1,3 +1,0 @@
-2. Przechwytujemy zapytanie w burpie i zmieniamy url z Tom na jerry.
-
-3. To samo, tylko zmieniamy url na http://ifconfig.pro.
